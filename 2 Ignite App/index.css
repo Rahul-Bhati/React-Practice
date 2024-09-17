@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+.navbar__menu ul {
+  display: flex;
+}
+
+.navbar__menu ul li {
+  list-style: none;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.navbar__logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar__menu ul li {
+  cursor: pointer;
+}
+
+.navbar__menu ul li:hover {
+  color: blue;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 500px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: black;
+}
+
+.card .card__img imag {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .card__info {
+  text-align: center;
+}
+
+.card .card__info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card .card__info p {
+  font-size: 16px;
+  color: #666;
+}
+
+.card .card__info button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.search_container input {
+  padding: 10px;
+  width: 300px;
+  /* border: none; */
+  border-radius: 5px;
+}
+
+.search_container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card__not_found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 500px;
+  padding: 20px;
+  margin: 20px;
+  font-weight: bold;
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+}
+
+/* res detail */
+.restaurant-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.restaurant-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.restaurant-info {
+  flex: 1;
+}
+
+.restaurant-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.restaurant-locality,
+.restaurant-cost,
+.restaurant-cuisines,
+.restaurant-rating {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.restaurant-details {
+  margin-top: 20px;
+}
+
+.restaurant-details p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.restaurant-menu-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.restaurant-menu-link:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "lect2-ignite-app",
+  "version": "1.0.0",
+  "description": "this is my lecture 2 practice from Namste react course",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rahul Bhati",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
