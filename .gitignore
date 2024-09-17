@@ -9,4 +9,14 @@
 ./*/.env.test
 ./*/.env.production
 ./*/.env.staging
+/lect2-ignite-app/node_modules
+/lect2-ignite-app/build
+/lect2-ignite-app/dist
+/lect2-ignite-app/.env
+/lect2-ignite-app/.env.local
+/lect2-ignite-app/.env.development
+/lect2-ignite-app/.env.test
+/lect2-ignite-app/.env.production
+/lect2-ignite-app/.env.staging
+
 
