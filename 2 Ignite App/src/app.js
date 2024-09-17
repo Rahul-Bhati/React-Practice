@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { Suspense, useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./components/Navbar";
 import {
@@ -12,6 +12,9 @@ import Restaurant from "./components/Restaurant";
 import RestaurantDetail, { loader as restaurantDetailLoader } from "./components/RestaurantDetail";
 import About from "./components/About";
 import { UserContext } from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // const content = React.createElement("div", { id: "main" }, [
 //   React.createElement(
@@ -53,9 +56,10 @@ const App = () => {
      * will change into sign value that is Rahul
      * */
     <UserContext.Provider value={{ logedInUser: sign, setSign }}>
-
-      <Navbar className="shadow-lg" />
-      <Outlet />
+      <Provider store={appStore}>
+        <Navbar className="shadow-lg" />
+        <Outlet />
+      </Provider>
 
     </UserContext.Provider>
 
@@ -66,7 +70,7 @@ const router = createBrowserRouter([
   {
     path: "/", element: <App />, children: [
       {
-        path: "/", element: <Restaurant />
+        path: "/", element: <Suspense fallback={() => <div>Loading...</div>}><Restaurant /></Suspense>
       },
       {
         path: "/restaurant/:id", element: <RestaurantDetail />
@@ -77,6 +81,9 @@ const router = createBrowserRouter([
       {
         path: "/contact", element: <div>Contact</div>
       },
+      {
+        path: "/cart", element: <Cart />
+      }
     ]
   },
 ]);
